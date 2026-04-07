@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sienna Ramirez - DMA Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #e4e4e4;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 920px;
+      margin: 24px auto;
+      padding: 0 28px 48px;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+      border: 1px solid #b0b0b0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin-top: 80px;
+      font-size: 22px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .project {
+      margin-bottom: 70px;
+    }
+
+    .project img,
+    .project video {
+      display: block;
+      width: 100%;
+      max-width: min(100%, 640px);
+      height: auto;
+      margin: 0 auto 15px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .medium {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .description {
+      max-width: 700px;
+    }
+
+    .image-caption {
+      font-size: 14px;
+      color: #555;
+      margin: -6px 0 18px;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 12px;
+        padding: 0 16px 40px;
+      }
+    }
+
+    .divider {
+      border-top: 1px solid #eee;
+      margin: 50px 0;
+    }
+
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .slideshow {
+      max-width: min(100%, 640px);
+      margin: 0 auto 15px;
+    }
+
+    .slideshow:focus-visible {
+      outline: 2px solid #333;
+      outline-offset: 4px;
+    }
+
+    .slideshow-viewport {
+      overflow: hidden;
+      width: 100%;
+      background: #f7f7f7;
+    }
+
+    .slideshow-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slideshow-slide {
+      flex: 0 0 100%;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slideshow-slide-label {
+      font-size: 14px;
+      color: #444;
+      font-style: italic;
+      text-align: center;
+      margin: 0;
+      padding: 10px 12px 14px;
+      background: #f0f0f0;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .slideshow-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 !important;
+      max-width: none !important;
+    }
+
+    .slideshow-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .slideshow-btn {
+      border: 1px solid #bbb;
+      background: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 4px;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+      color: #222;
+    }
+
+    .slideshow-btn:hover {
+      background: #f0f0f0;
+    }
+
+    .slideshow-btn:focus-visible {
+      outline: 2px solid #333;
+      outline-offset: 2px;
+    }
+
+    .slideshow-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .slideshow-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #777;
+      background: #fff;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .slideshow-dot[aria-selected="true"] {
+      background: #333;
+      border-color: #333;
+    }
+
+    .slideshow-dot:focus-visible {
+      outline: 2px solid #333;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sienna Ramirez</h1>
+  <p>Digital Media Art Portfolio — San José State University</p>
+</header>
+
+<div class="container">
+
+  <!-- 1 -->
+  <div class="project">
+    <img src="assets/Birdbrains7.png" alt="Glitch bird artwork">
+    <div class="title">Birdbrains </div>
+    <div class="medium">Digital Mixed Media</div>
+    <p class="description">
+      This piece explores a dystopian and unsettling atmosphere through layered digital imagery. I combined photographs in Photoshop, including a silhouetted bird and a night setting, to create a scene that feels distorted and unfamiliar. The green tones and glitch effects are inspired by night vision imagery, giving the impression of viewing the outside world through a mediated or restricted perspective. I focused on creating a sense of distance and unease, where the subject appears fragmented and partially obscured, as if seen through a malfunctioning or outdated screen.
+      </p>
+    </div>
+
+  <div class="divider"></div>
+
+  <!-- 2 -->
+  <div class="project">
+    <img src="assets/digital_collage.png" alt="Media collage">
+    <div class="title">Packaged for You </div>
+    <div class="medium">Digital Collage</div>
+    <p class="description">
+      “Packaged for You” explores influencer culture and the ways social media encourages self-presentation as a form of consumption. The composition reflects how individuals are often “packaged” for visibility, shaping identity around likes, views, and online engagement. I used digital collage to combine imagery of shopping and media, emphasizing how technology influences behavior and decision-making. The phone gripping the shopping cart symbolizes control, suggesting how digital platforms can guide attention, spending, and self-image within a highly mediated environment.
+      </p>
+    </div>
+
+  <div class="divider"></div>
+
+  <!-- 3 -->
+  <div class="project">
+    <img src="assets/IMG551.png" alt="Portrait illustration">
+    <div class="title">Bleeding Silence </div>
+    <div class="medium">Digital Illustration</div>
+    <p class="description">
+      “Bleeding Silence” explores themes of vulnerability, self-consciousness, and emotional suppression. The figure covers their face as an attempt to hide feelings of discomfort or shame, yet those emotions continue to emerge through the surrounding space. The bleeding forms suggest that what is being concealed cannot be fully controlled or contained. I used digital painting techniques to emphasize contrast and color intensity, allowing the emotion to feel present even when the subject attempts to obscure it. The piece reflects the tension between concealment and visibility.
+      </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4 — group piece; seal is my contribution -->
+  <div class="project">
+    <div class="slideshow" data-slideshow tabindex="0" role="region" aria-roledescription="carousel" aria-label="Environmental crisis collaborative collage and seal contribution">
+      <div class="slideshow-viewport">
+        <div class="slideshow-track">
+          <div class="slideshow-slide">
+            <img src="assets/Environmental_Crisis.png" alt="Environmental collage — full collaborative artwork">
+            <p class="slideshow-slide-label">Full collaborative piece</p>
+          </div>
+          <div class="slideshow-slide">
+            <img src="assets/sasSeal.png" alt="Seal illustration — my contribution to the group project">
+            <p class="slideshow-slide-label">My contribution: seal illustration</p>
+          </div>
+        </div>
+      </div>
+      <div class="slideshow-toolbar">
+        <button type="button" class="slideshow-btn" data-slideshow-prev aria-label="Previous slide">‹</button>
+        <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+        <button type="button" class="slideshow-btn" data-slideshow-next aria-label="Next slide">›</button>
+      </div>
+    </div>
+    <div class="title">Environmental Crisis</div>
+    <div class="medium">Digital Collage (Group Project)</div>
+    <p class="description">This composite addresses environmental destruction through a shared landscape of fire, pollution, and marine harm. As a group, we built the full scene by combining illustrated and collage elements into one narrative image.</p>
+    <p class="description">My individual contribution was the seal illustration, the distressed seal entangled in plastic in the underwater section of the piece. I developed that figure to anchor the marine pollution theme and connect visually to the rest of the collaboration.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5 -->
+  <div class="project">
+    <img src="assets/Amphibeam.png" alt="Eye graphic">
+    <div class="title">Amphibeam</div>
+    <div class="medium">Digital Graphic Artwork</div>
+    <p class="description">This graphic composition explores repetition, symmetry, and visual rhythm through bold shapes and high contrast. The central eye form acts as a focal point, surrounded by abstract organic patterns that create movement and tension within the image.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 6 -->
+  <div class="project">
+    <img src="assets/Charcoal_potato.png" alt="Charcoal still life">
+    <div class="title">From the Soil</div>
+    <div class="medium">Charcoal on Paper</div>
+    <p class="description">This still life study focuses on value, form, and shading. Through careful observation and mark making, I developed tonal contrast to create depth and volume. The piece demonstrates foundational drawing skills and attention to light and surface.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 7 -->
+  <div class="project">
+    <img src="assets/IMG_6568.png" alt="Charcoal drawing">
+    <div class="title">Path Through Growth</div>
+    <div class="medium">Charcoal on Paper</div>
+    <p class="description">
+      This charcoal drawing explores structure, depth, and metaphor through the repetition of bamboo forms. The bamboo along the edges appears more upright and stable, while the forms toward the center become more curved and entangled, creating a sense of movement and complexity. A lighter pathway through the center guides the eye inward, suggesting a progression through space. Conceptually, the piece reflects personal growth, where early stages feel more direct, while later experiences become more complicated and require adaptation. I focused on mark variation and tonal contrast to emphasize both structure and flow.
+      </p>
+  </div>
+
+  <h2>Artist Statement</h2>
+  <p>
+    (Add your final statement here — around 400–500 words)
+  </p>
+
+  <h2>About</h2>
+  <p>
+    I am a Digital Media Art student at San José State University interested in combining digital and traditional media to explore themes of identity, environment, and perception.
+  </p>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="project">
+  <div class="slideshow" data-slideshow tabindex="0" role="region" aria-roledescription="carousel" aria-label="Banana project photos">
+    <div class="slideshow-viewport">
+      <div class="slideshow-track">
+        <div class="slideshow-slide">
+          <img src="assets/banana-3.png" alt="Fabric banana sculpture from another angle">
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/banana-2.png" alt="Fabric banana sculpture partially peeled">
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/banana-1.png" alt="Fabric banana sculpture standing on peel legs">
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-toolbar">
+      <button type="button" class="slideshow-btn" data-slideshow-prev aria-label="Previous photo">‹</button>
+      <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+      <button type="button" class="slideshow-btn" data-slideshow-next aria-label="Next photo">›</button>
+    </div>
+  </div>
+  <div class="title">Banana Stitch</div>
+  <div class="medium">Soft Sculpture</div>
+
+    <p class="description">
+      “Banana Stitch” is a soft sculpture inspired by the banana objects used in games such as Mario Kart. I constructed the form using hand-sewn fabric, focusing on soft materials and shape. The inside of the banana is removable, introducing an interactive element that allows the viewer to physically engage with the piece. This feature transforms it from a static object into something more playful and participatory, exploring how interaction can change the experience of a familiar form.
+      </p>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="project">
+  <div class="slideshow" data-slideshow tabindex="0" role="region" aria-roledescription="carousel" aria-label="Book rabbit project photos">
+    <div class="slideshow-viewport">
+      <div class="slideshow-track">
+        <div class="slideshow-slide">
+          <img src="assets/book-rabbit-1.png" alt="Jackalope paper sculpture emerging from an open book">
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/book-rabbit-2.png" alt="Jackalope sculpture from another angle">
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-toolbar">
+      <button type="button" class="slideshow-btn" data-slideshow-prev aria-label="Previous photo">‹</button>
+      <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+      <button type="button" class="slideshow-btn" data-slideshow-next aria-label="Next photo">›</button>
+    </div>
+  </div>
+  <div class="title">From Page to Reality</div>
+  <div class="medium">Papier-mâché Sculpture</div>
+  <p class="description">
+    “From Page to Reality” is a papier-mâché sculpture depicting a jackalope emerging from an open book. Inspired by a story about fictional characters coming to life, the piece explores the transformation of imagination into physical form. I chose the jackalope for its balance of charm and unease, combining playful and slightly eerie qualities. Using papier-mâché and wire, I constructed the figure to appear mid-motion, with the form extending outward from the pages. The piece emphasizes movement and structure, capturing the moment where a fictional creature becomes tangible and alive.
+    </p>
+</div>
+
+<div class="divider"></div>
+
+<div class="project">
+  <video controls preload="metadata" playsinline>
+    <source src="assets/Dancing%20Cat%20Party.mp4" type="video/mp4">
+    <p class="description">Your browser does not support embedded video.</p>
+  </video>
+  <div class="title">Dancing Cat Party</div>
+  <div class="medium">Video Editing</div>
+  <p class="description">
+    “Dancing Cat Party” is a video editing project that explores rhythm, timing, and visual emphasis through a stylized sequence of dancing cat footage. I manipulated the speed of individual clips to create variation and energy, while adjusting lighting and color to reflect different party-like environments. I introduced contrasting color tones, such as red and blue lighting, to divide the space and create visual interest. The piece is intended to be comedic, playful, and lighthearted, using humor and exaggeration to create an engaging and entertaining visual experience.
+    </p>
+</div>
+
+
+<div class="divider"></div>
+
+<div class="project">
+  <div class="slideshow" data-slideshow tabindex="0" role="region" aria-roledescription="carousel" aria-label="Shapeshifter Hotel website screenshots">
+    <div class="slideshow-viewport">
+      <div class="slideshow-track">
+        <div class="slideshow-slide">
+          <img src="assets/hotel-lobby.png" alt="Shapeshifter Hotel lobby with deer bellhop and welcome text">
+          <p class="slideshow-slide-label">Lobby — welcome &amp; check-in</p>
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/hotel-doors.png" alt="Three numbered hotel doors">
+          <p class="slideshow-slide-label">Door selection</p>
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/hotel-room-fragmentation.png" alt="Room of Fragmentation screen with glowing orb">
+          <p class="slideshow-slide-label">Room of Fragmentation</p>
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/hotel-exit.png" alt="Exit screen with closing text">
+          <p class="slideshow-slide-label">Exit</p>
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-toolbar">
+      <button type="button" class="slideshow-btn" data-slideshow-prev aria-label="Previous slide">‹</button>
+      <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+      <button type="button" class="slideshow-btn" data-slideshow-next aria-label="Next slide">›</button>
+    </div>
+  </div>
+  <div class="title">Shapeshifter Hotel</div>
+  <div class="medium">Interactive Website</div>
+  <p class="description">
+    “Shapeshifter Hotel” is an interactive web-based experience that explores identity, transformation, and fragmentation through a series of navigable rooms. Each door presents a different possibility, but not all are accessible some remain locked, while others reflect hesitation and the choice not to enter. These barriers introduce a sense of uncertainty and control, emphasizing that not every part of the self can be easily explored. Through movement between spaces, including moments of breaking apart and reconstruction, the project uses digital interaction to represent identity as unstable, selective, and constantly evolving.
+    </p>
+
+  <p><a href="https://siennan.github.io/avatar-data.self.portrait/" target="_blank" rel="noopener noreferrer">View Website</a></p>
+</div>
+
+<div class="divider"></div>
+
+<div class="project">
+  <div class="slideshow" data-slideshow tabindex="0" role="region" aria-roledescription="carousel" aria-label="Terminal Chat game and chat interface">
+    <div class="slideshow-viewport">
+      <div class="slideshow-track">
+        <div class="slideshow-slide">
+          <img src="assets/terminal-chat-game.png" alt="Green terminal-style game initialization screen for Snake.exe">
+          <p class="slideshow-slide-label">Game initialization screen</p>
+        </div>
+        <div class="slideshow-slide">
+          <img src="assets/terminal-chat-screen.png" alt="Green terminal-style chat interface with messages and user list">
+          <p class="slideshow-slide-label">Terminal chat interface</p>
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-toolbar">
+      <button type="button" class="slideshow-btn" data-slideshow-prev aria-label="Previous slide">‹</button>
+      <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+      <button type="button" class="slideshow-btn" data-slideshow-next aria-label="Next slide">›</button>
+    </div>
+  </div>
+
+  <div class="title">Terminal Chat</div>
+  <div class="medium">Interactive Web Application</div>
+
+  <p class="description">
+    This project is a real-time interactive web application developed collaboratively using Node.js and WebSockets. It allows multiple users to join a shared session, choose usernames, and interact through multiplayer gameplay and a live chat system. The project explores how networked technology enables connection and collaboration across distance. 
+
+    In this project, I designed the user interface and interactive elements, focusing on user engagement and responsiveness. I implemented animated chat features, including a character that reacts to messages, and developed a level and point system to encourage participation, creating a dynamic shared environment.
+  </p>
+
+  <p>
+    <a href="https://nov-xcd8.onrender.com/" target="_blank">
+      View Live Website
+    </a>
+  </p>
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll("[data-slideshow]").forEach(function (root) {
+    var track = root.querySelector(".slideshow-track");
+    var slides = root.querySelectorAll(".slideshow-slide");
+    var prevBtn = root.querySelector("[data-slideshow-prev]");
+    var nextBtn = root.querySelector("[data-slideshow-next]");
+    var dotsWrap = root.querySelector(".slideshow-dots");
+    if (!track || !slides.length || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    var n = slides.length;
+    var i = 0;
+
+    function setTransform() {
+      track.style.transform = "translateX(" + -i * 100 + "%)";
+    }
+
+    function updateDots() {
+      var dots = dotsWrap.querySelectorAll(".slideshow-dot");
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].setAttribute("aria-selected", d === i ? "true" : "false");
+      }
+    }
+
+    function go(to) {
+      i = (to % n + n) % n;
+      setTransform();
+      updateDots();
+    }
+
+    for (var d = 0; d < n; d++) {
+      (function (index) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "slideshow-dot";
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", "Photo " + (index + 1) + " of " + n);
+        b.addEventListener("click", function () {
+          go(index);
+        });
+        dotsWrap.appendChild(b);
+      })(d);
+    }
+    updateDots();
+
+    prevBtn.addEventListener("click", function () {
+      go(i - 1);
+    });
+    nextBtn.addEventListener("click", function () {
+      go(i + 1);
+    });
+
+    root.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") {
+        go(i - 1);
+        e.preventDefault();
+      } else if (e.key === "ArrowRight") {
+        go(i + 1);
+        e.preventDefault();
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
