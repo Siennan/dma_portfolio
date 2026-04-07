@@ -100,6 +100,12 @@
     a {
       color: black;
       text-decoration: underline;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    a:hover {
+      color: #ff4f9a;
+      text-shadow: 0 0 6px rgba(255, 79, 154, 0.8);
     }
 
     .slideshow {
@@ -203,6 +209,42 @@
     .slideshow-dot:focus-visible {
       outline: 2px solid #333;
       outline-offset: 2px;
+    }
+
+    .zoomable {
+      cursor: zoom-in;
+    }
+
+    .zoom-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 24px;
+    }
+
+    .zoom-overlay--visible {
+      display: flex;
+    }
+
+    .zoom-overlay img {
+      max-width: 96vw;
+      max-height: 96vh;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+      background: #111;
+    }
+
+    .zoom-overlay-close {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      color: #fff;
+      font-size: 26px;
+      cursor: pointer;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     }
   </style>
 </head>
@@ -492,6 +534,11 @@
   </p>
 </div>
 
+<div class="zoom-overlay" data-zoom-overlay aria-hidden="true">
+  <div class="zoom-overlay-close" data-zoom-close aria-label="Close zoom view" role="button">×</div>
+  <img alt="" data-zoom-image>
+</div>
+
 <script>
 (function () {
   document.querySelectorAll("[data-slideshow]").forEach(function (root) {
@@ -553,6 +600,48 @@
         e.preventDefault();
       }
     });
+  });
+})();
+
+(function () {
+  var overlay = document.querySelector("[data-zoom-overlay]");
+  var overlayImg = overlay && overlay.querySelector("[data-zoom-image]");
+  var closeBtn = overlay && overlay.querySelector("[data-zoom-close]");
+  if (!overlay || !overlayImg || !closeBtn) return;
+
+  function openZoom(src, alt) {
+    overlayImg.src = src;
+    overlayImg.alt = alt || "";
+    overlay.classList.add("zoom-overlay--visible");
+    overlay.setAttribute("aria-hidden", "false");
+  }
+
+  function closeZoom() {
+    overlay.classList.remove("zoom-overlay--visible");
+    overlay.setAttribute("aria-hidden", "true");
+    overlayImg.src = "";
+  }
+
+  document.addEventListener("click", function (e) {
+    var target = e.target;
+    if (!(target instanceof HTMLElement)) return;
+
+    if (target.matches("img.zoomable")) {
+      openZoom(target.currentSrc || target.src, target.alt);
+    } else if (target.closest("[data-zoom-close]") || target === overlay) {
+      closeZoom();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (!overlay.classList.contains("zoom-overlay--visible")) return;
+    if (e.key === "Escape") {
+      closeZoom();
+    }
+  });
+
+  document.querySelectorAll(".project img").forEach(function (img) {
+    img.classList.add("zoomable");
   });
 })();
 </script>
